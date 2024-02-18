@@ -190,7 +190,7 @@
                             <div class="mx-auto lg:mx-0">
                                 <a class="btn bg-[#1DD1001A]">
                                     <img src="./images/seat-green.png" alt="">
-                                    <span class="text-[#1DD100] text-lg lg:text-xl font-medium lg:font-bold"><span id="total-seat">8</span> Seat</span>        
+                                    <span class="text-[#1DD100] text-lg lg:text-xl font-medium lg:font-bold"><span id="seat-remain">8</span> Seat</span>        
                                 </a>
 
                             </div>
@@ -256,16 +256,16 @@
                                 <p class="px-2 lg:px-5 py-2 border-4  border-white">B</p>
                             </div>
                             <div class="grid grid-cols-2 grid-rows-2 gap-2 lg:gap-5">
-                                <a onclick="" id="A1" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">A1</a>
-                                <a id="A2" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">A2</a>
-                                <a id="B1" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">B1</a>
-                                <a id="B2" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">B2</a>      
+                                <a onclick="select(id)" id="A1" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">A1</a>
+                                <a onclick="select(id)" id="A2" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">A2</a>
+                                <a onclick="select(id)" id="B1" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">B1</a>
+                                <a onclick="select(id)" id="B2" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">B2</a>      
                             </div>
                             <div class="grid grid-cols-2 grid-rows-2 gap-2 lg:gap-5">
-                                <a id="A3" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">A3</a>
-                                <a id="A4" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">A4</a>
-                                <a id="B3" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">B3</a>
-                                <a id="B4" class="btn bg-[#0307120D] px-2 lg:px-5 py-2 border-4  rounded-2xl">B4</a>      
+                                <a onclick="select(id)" id="A3" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">A3</a>
+                                <a onclick="select(id)" id="A4" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">A4</a>
+                                <a onclick="select(id)" id="B3" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">B3</a>
+                                <a onclick="select(id)" id="B4" class="btn bg-gray-100 px-2 lg:px-5 py-2 border-4  rounded-2xl">B4</a>      
                             </div>
                             
                         </div>
@@ -279,7 +279,7 @@
                         <h3 class="border-b-4 border-dotted text-2xl text-center font-semibold pb-2">Your Transaction</h3>
                         <div class="p-10">
                             <div class="grid text-center grid-cols-3 mt-5 border-b-4 border-dotted">
-                                <p class="font-bold text-xl">Seat <span class="bg-[#1DD100] text-white p-1" id="ticket-selected">0</span> </p>
+                                <p class="font-bold text-xl">Seat <span class="bg-[#1DD100] text-white p-1" id="total-seat">0</span> </p>
                                 <p class="font-bold text-xl">Class</p>
                                 <p class="font-bold text-xl">Price</p>
                                 
@@ -352,5 +352,6 @@
     </footer>
 
     <script src="./scripts/utility.js" defer></script>
+    <script src="./scripts/functionality.js" defer></script>
 </body>
 </html>
