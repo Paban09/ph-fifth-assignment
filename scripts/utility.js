@@ -9,3 +9,10 @@ function getValue(element){
     return number;
 }
 
+
+function createP(value){
+    let p=document.createElement('p');
+    p.innerText=value;
+    return p;
+}
+

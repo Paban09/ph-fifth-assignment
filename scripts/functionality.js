@@ -1,4 +1,7 @@
 let seatList=[];
+const classType='economy';
+const ticketPrice=550;
+
 
 function select(id){
 
@@ -10,11 +13,28 @@ function select(id){
 
         if(totalNumber<=4){
 
-            seatList.push(id);
-            console.log(seatList);
+            seatList.push(id);          
+
             let selectedSit=getElementById(id);
-            // console.log(selectedSit);
-            console.log(selectedSit.classList);
+            selectedSit.classList.remove('bg-gray-100');
+            selectedSit.classList.add('bg-[#1DD100]');
+            selectedSit.classList.add('text-white');
+
+
+            let tableOfTransaction=getElementById('transaction-list');
+            let p1 = createP(id);           
+            let p2 = createP(classType);
+            let p3 = createP(ticketPrice);
+            tableOfTransaction.append(p1);
+            tableOfTransaction.append(p2);
+            tableOfTransaction.append(p3);
+            
+            // console.log(typeof ticketPrice);
+            let totalPrice=getElementById('total');
+            let totalValue=getValue(totalPrice);
+            totalValue=totalValue+ticketPrice;
+            totalPrice.innerText=totalValue;
+            console.log(totalValue);
         
             let remain=getElementById('seat-remain');
             let remainNumber=getValue(remain);
@@ -22,6 +42,8 @@ function select(id){
 
             total.innerText=totalNumber;
             remain.innerText=remainNumber;
+
+            
            
         }
     }
