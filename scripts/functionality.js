@@ -1,8 +1,7 @@
 let seatList=[];
 const classType='economy';
 const ticketPrice=550;
-let couponOne='NEW15';
-let couponTwo='Couple 20';
+
 // let totalNumber=0;
 
 
@@ -28,16 +27,20 @@ function select(id){
             let p1 = createP(id);           
             let p2 = createP(classType);
             let p3 = createP(ticketPrice);
-            tableOfTransaction.append(p1);
-            tableOfTransaction.append(p2);
-            tableOfTransaction.append(p3);
+            tableOfTransaction.appendChild(p1);
+            tableOfTransaction.appendChild(p2);
+            tableOfTransaction.appendChild(p3);
             
             // console.log(typeof ticketPrice);
             let totalPrice=getElementById('total');
             let totalValue=getValue(totalPrice);
             totalValue=totalValue+ticketPrice;
             totalPrice.innerText=totalValue;
-            // console.log(totalValue);
+
+
+            let grandPrice=getElementById('grand-total');
+            let grandValue=getValue(grandPrice);
+            grandPrice.innerText=totalValue;
         
             let remain=getElementById('seat-remain');
             let remainNumber=getValue(remain);
@@ -55,4 +58,27 @@ function select(id){
         alert("Already Selected");
     }
         
+}
+
+
+function setPrice(id){
+    
+    const couponOne='NEW15';
+    const couponTwo='Couple 20';
+    const element=getElementById('coupon');
+    let coupon =element.value;
+    let applyButton=getElementById(id);
+    if(coupon===couponOne){
+        calculate(15);
+        applyButton.parentNode.classList.add('hidden');
+
+        
+    }else if(coupon===couponTwo){
+        calculate(20);
+        applyButton.parentNode.classList.add('hidden');
+
+        
+    }else{
+        alert("Invalid Coupon");
+    }
 }
