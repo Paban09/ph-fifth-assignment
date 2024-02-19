@@ -66,7 +66,7 @@
                   <div class="min-w-md lg:w-3/4">
                     <h1 class="mb-5 text-3xl lg:text-6xl font-bold lg:font-extrabold">End-to-End Travel with <br> <span class="text-[#1DD100]">Paban Paribahan</span> </h1>
                     <p class="mb-5 fonts-inter text-lg">Enjoy a safe journey with your family and friends together with Paban Paribahan. We provide tickets of various price range with out considering the quality.</p>
-                    <button class="text-xl font-bold btn bg-[#1DD100] outline-none border-none">Buy Tickets</button>
+                    <a href="#scroll" class="btn text-xl font-bold btn bg-[#1DD100] outline-none border-none">Buy Tickets</a>
                   </div>
                 </div>
             </div>
@@ -230,7 +230,7 @@
                 </div>
 
                 <!-- seat and money part -->
-                <div class="bg-white rounded-3xl mt-5 p-2 lg:p-10 flex flex-col lg:flex-row gap-10">
+                <div id="scroll" class="bg-white rounded-3xl mt-5 p-2 lg:p-10 flex flex-col lg:flex-row gap-10">
                     <!-- select ticket  -->
                     <div class="space-y-4 max-w-fit mx-auto lg:mx-0  lg:px-10 border-r-0 lg:border-r-4 border-none lg:border-dotted">
 
@@ -306,10 +306,26 @@
                                 <p class="text-center">BDT <span id="grand-total"> 0</span></p>
                             </div>
 
-                            <div class="mt-5">
-                                <a class="btn bg-[#1DD100] flex flex-1">
+                            <!-- modal button  -->
+                            <div class="mt-5 flex">
+                                
+                                <button class="btn bg-[#1DD100]  flex-1" onclick="my_modal_3.showModal()">
                                     <span class="text-white text-lg lg:text-xl font-medium lg:font-bold">NEXT</span> 
-                                </a>
+                                </button>
+                                <dialog id="my_modal_3" class="modal">
+
+                                    <div class="modal-box">
+                                        <form method="dialog">
+                                            <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+                                        </form>
+                                        <div>
+                                            <h3 class="font-bold text-lg">Hello!</h3>
+                                            <p class="py-4">Press ESC key or click on ✕ button to close</p>
+                                        </div>
+                                        
+                                    </div>
+
+                                </dialog>
                             </div>
                             
                         </div>

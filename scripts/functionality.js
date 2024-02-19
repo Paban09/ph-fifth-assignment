@@ -1,6 +1,9 @@
 let seatList=[];
 const classType='economy';
 const ticketPrice=550;
+let couponOne='NEW15';
+let couponTwo='Couple 20';
+let totalNumber=0;
 
 
 function select(id){
@@ -8,7 +11,7 @@ function select(id){
     if(!seatList.includes(id)){
 
         let total=getElementById('total-seat');
-        let totalNumber=getValue(total);
+        totalNumber=getValue(total);
         totalNumber=totalNumber+1;
 
         if(totalNumber<=4){
@@ -34,7 +37,7 @@ function select(id){
             let totalValue=getValue(totalPrice);
             totalValue=totalValue+ticketPrice;
             totalPrice.innerText=totalValue;
-            console.log(totalValue);
+            // console.log(totalValue);
         
             let remain=getElementById('seat-remain');
             let remainNumber=getValue(remain);
@@ -45,7 +48,11 @@ function select(id){
 
             
            
+        }else{
+            alert("You Can't Buy More Ticket");
         }
+    }else{
+        alert("Already Selected");
     }
         
 }
