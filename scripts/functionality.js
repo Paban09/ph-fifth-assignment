@@ -3,7 +3,7 @@ const classType='economy';
 const ticketPrice=550;
 let couponOne='NEW15';
 let couponTwo='Couple 20';
-let totalNumber=0;
+// let totalNumber=0;
 
 
 function select(id){
@@ -11,7 +11,7 @@ function select(id){
     if(!seatList.includes(id)){
 
         let total=getElementById('total-seat');
-        totalNumber=getValue(total);
+        let totalNumber=getValue(total);
         totalNumber=totalNumber+1;
 
         if(totalNumber<=4){
