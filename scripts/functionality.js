@@ -15,6 +15,8 @@ function select(id){
 
         if(totalNumber<=4){
 
+            buttonEnable();
+
             seatList.push(id);          
 
             let selectedSit=getElementById(id);

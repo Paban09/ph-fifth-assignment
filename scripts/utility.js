@@ -37,3 +37,8 @@ function calculate(value){
     grandPrice.innerText=grandTotal;
 }
 
+
+function buttonEnable(){
+    let button=getElementById('next');
+    button.disabled=false;
+}
