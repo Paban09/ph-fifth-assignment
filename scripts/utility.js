@@ -24,10 +24,12 @@ function calculate(value){
     console.log('totalValue',totalValue,'discount',discount,'grandTotal',grandTotal);
 
     let tableOfDiscount=getElementById('discount');
-    let p1 = createP('discount');           
+    let p1 = createP('Discount');           
     let p2 = createP(discount);
     p1.classList.add('col-span-2');
+    p1.classList.add('text-red-500');
     p2.classList.add('text-center');
+    p2.classList.add('text-red-500');
     tableOfDiscount.appendChild(p1);
     tableOfDiscount.appendChild(p2);
 
